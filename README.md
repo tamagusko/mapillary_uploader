@@ -2,6 +2,8 @@
 
 This is a simple Streamlit app that allows users to upload GoPro MP4 video files and submit them to the [Mapillary](https://www.mapillary.com/) dataset.
 
+![App Screenshot](img/app.jpg)
+
 ## 🔧 Features
 
 - Web interface to upload `.mp4` videos
