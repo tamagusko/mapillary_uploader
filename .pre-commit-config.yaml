@@ -1,0 +1,54 @@
+repos:
+  # Core pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-added-large-files
+        args: ["--maxkb=100000"] # Limit to 100MB
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-docstring-first
+      - id: debug-statements
+      - id: check-yaml
+      - id: requirements-txt-fixer
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
+
+  # Linting with flake8
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        args: ["--ignore=E501,W503"]
+        additional_dependencies:
+          - flake8-typing-imports==1.12.0
+
+  # Import sorting
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v3.11.0
+    hooks:
+      - id: reorder-python-imports
+        args: [--py37-plus]
+
+  # Trailing commas
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+      - id: add-trailing-comma
+        args: [--py36-plus]
+
+  # Type checking with mypy
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+
+  # Black for consistent code formatting
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        args: ["--line-length=120", "--quiet", "."]
+        pass_filenames: false

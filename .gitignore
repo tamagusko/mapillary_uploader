@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment variables
+.env
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# bkp
+bkp/
+
+# Data and uploaded files
+data/uploaded/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Streamlit-specific
+.streamlit/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
